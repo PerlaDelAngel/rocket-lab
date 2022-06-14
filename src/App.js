@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import active from './assets/rocketActive.svg';
 import destroyed from './assets/rocketDeactivate.svg';
 import unknown from './assets/rocketUnknown.svg';
+import Rocket from './components/Rocket/Rocket';
 
 function App() {
   const [ rockets, setRockets ] = useState();
@@ -14,6 +15,8 @@ function App() {
       .then((response) => response.json())
       .then((rocket) => setRockets(rocket));
   }, [])
+
+  console.log(rockets)
 
   return (
     <div className="App">
@@ -27,6 +30,18 @@ function App() {
       </section>
       
       <h2>All Capsules:</h2>
+      <section className='allCapsules'>
+        {rockets?.map(rocket => {
+          return (
+            <Rocket 
+              key={rocket.capsule_serial}
+              serial={rocket.capsule_serial}
+              details={rocket.details}
+              status={rocket.status}  
+            />
+          )
+        })}
+      </section>
 
     </div>
   );
