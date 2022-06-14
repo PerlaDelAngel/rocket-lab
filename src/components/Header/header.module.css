@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     height: 60px;
-    margin: 1.8em 0 0 1.8em;
+    margin: 1.8em 0 0 1.6em;
 }
 
 .headerText{
@@ -24,7 +24,7 @@
     flex-direction: column;
     color: white;
     position: absolute;
-    top: 19%;
+    top: 18%;
 }
 
 .title{
@@ -33,6 +33,21 @@
     letter-spacing: 35px;
     margin: 0;
     text-align: center;
+    animation: to-right 3s;
+}
+
+@keyframes to-right {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .subtitle{
@@ -41,6 +56,21 @@
     letter-spacing: 10px;
     margin: 0;
     text-align: center;
+    animation: to-left 3s;
+}
+
+@keyframes to-left {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .startBtn{
@@ -48,10 +78,21 @@
     padding: 20px 40px;
     display: inline-block;
     border-radius: 100px;
-    margin-top: 4em;
+    margin-top: 3.8em;
     color: #777;
     font-size: 16px;
     border: 0;
     background-color: white;
+    animation: to-top 2s;
 }
 
+@keyframes to-top {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

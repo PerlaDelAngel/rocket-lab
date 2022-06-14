@@ -6,6 +6,7 @@ import active from './assets/rocketActive.svg';
 import destroyed from './assets/rocketDeactivate.svg';
 import unknown from './assets/rocketUnknown.svg';
 import Rocket from './components/Rocket/Rocket';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [ rockets, setRockets ] = useState();
@@ -43,6 +44,7 @@ function App() {
         })}
       </section>
 
+      <Footer />
     </div>
   );
 }
