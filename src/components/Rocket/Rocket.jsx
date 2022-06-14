@@ -18,12 +18,12 @@ export default function Rocket({ serial, details, status }) {
   }, [status])
 
   return (
-    <article>
-      <span>
-        <h3>{serial}</h3>
+    <article className={styles.article}>
+      <span className={styles.nameStatus}>
+        <h3 className={styles.name}>{serial}</h3>
         <img src={pic} alt='rocket status icon' className={styles.cardIcon}></img>
       </span>
-      <p>{details}</p>
+      <p className={styles.details}>{details}</p>
     </article>
   )
 }
