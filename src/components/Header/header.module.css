@@ -32,6 +32,8 @@
     font-weight: 400;
     letter-spacing: 35px;
     margin: 0;
+    text-align: center;
+
 }
 
 .subtitle{
@@ -39,6 +41,7 @@
     font-weight: 700;
     letter-spacing: 10px;
     margin: 0;
+    text-align: center;
 }
 
 .startBtn{
