@@ -1,6 +1,6 @@
 # Rocket-Lab
 
-The goal of this project was to replicate the website of [Rocket-Lab](https://rocket-laboratoria.vercel.app/#) using a JavaScript library or framework. Below you will find a picture of the desired result. 
+The goal of this project was to replicate the website of [Rocket-Lab](https://rocket-laboratoria.vercel.app/#) using a JavaScript library or framework, the site shows a list of all the deployed capsules of SpaceX and their respective status. Below you will find a picture of the desired result. 
 
 ![rocket-lab-site](./src/assets/fullpage.png)
 
