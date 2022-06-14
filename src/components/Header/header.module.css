@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     height: 60px;
-    margin: 1.8em 0 0 1.8em;
+    margin: 1.8em 0 0 1.6em;
 }
 
 .headerText{
@@ -24,7 +24,7 @@
     flex-direction: column;
     color: white;
     position: absolute;
-    top: 19%;
+    top: 18%;
 }
 
 .title{
@@ -48,7 +48,7 @@
     padding: 20px 40px;
     display: inline-block;
     border-radius: 100px;
-    margin-top: 4em;
+    margin-top: 3.8em;
     color: #777;
     font-size: 16px;
     border: 0;
