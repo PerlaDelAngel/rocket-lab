@@ -1,6 +1,5 @@
 import rocket from '../../assets/rocket.svg';
 import styles from './header.module.css';
-import '../../index.css'
 
 export default function Header() {
   return (
@@ -12,6 +11,5 @@ export default function Header() {
         <button type='button' className={styles.startBtn}>start</button>
       </section>
     </header>
-
   )
 }

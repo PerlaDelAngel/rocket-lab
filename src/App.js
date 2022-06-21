@@ -1,12 +1,15 @@
-import './App.css';
-import Header from './components/Header/Header';
-import Status from './components/Status/Status';
 import { useEffect, useState } from 'react';
+
+import './App.css';
+
+import Header from './components/Header/Header';
+import Rocket from './components/Rocket/Rocket';
+import Status from './components/Status/Status';
+import Footer from './components/Footer/Footer';
+
 import active from './assets/rocketActive.svg';
 import destroyed from './assets/rocketDeactivate.svg';
 import unknown from './assets/rocketUnknown.svg';
-import Rocket from './components/Rocket/Rocket';
-import Footer from './components/Footer/Footer';
 
 function App() {
   const [ rockets, setRockets ] = useState();
@@ -15,9 +18,7 @@ function App() {
     fetch('https://api.spacexdata.com/v3/capsules')
       .then((response) => response.json())
       .then((rocket) => setRockets(rocket));
-  }, [])
-
-  console.log(rockets)
+  }, []);
 
   return (
     <div className="App">
@@ -32,16 +33,12 @@ function App() {
       
       <h2>All Capsules:</h2>
       <section className='allCapsules'>
-        {rockets?.map(rocket => {
-          return (
-            <Rocket 
-              key={rocket.capsule_serial}
-              serial={rocket.capsule_serial}
-              details={rocket.details}
-              status={rocket.status}  
-            />
-          )
-        })}
+        {rockets?.map(rocket => <Rocket
+          key={rocket.capsule_serial}
+          serial={rocket.capsule_serial}
+          details={rocket.details}
+          status={rocket.status}
+        />)}
       </section>
 
       <Footer />

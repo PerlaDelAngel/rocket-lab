@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+
+import styles from './rocket.module.css';
+
 import activeIcon from '../../assets/rocketActive.svg';
 import destroyedIcon from '../../assets/rocketDeactivate.svg';
 import unknownIcon from '../../assets/rocketUnknown.svg';
-import styles from './rocket.module.css';
 
 export default function Rocket({ serial, details, status }) {
   const [pic, setPic] = useState();
